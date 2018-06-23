@@ -1,0 +1,52 @@
+
+.project-section__heading
+  color: black
+
+  &::after
+    content: ""
+    background: url("../img_old/Underline.png")
+    height: 1px
+    width: 30px
+    display: block
+    margin: 15px auto 0
+
+.project-section__header
+  position: relative
+  margin: 50px 0
+  &::after
+    position: absolute
+    content: ""
+    background: url("../img_old/Psm.png")
+    background-position: center
+    background-size: cover
+    top: 0px
+    right: 0px
+    height: 200px
+    width: 180px
+.project-section__images-wrapper--top
+  display: none
+.project-section__images-wrapper--bottom
+  display: none
+@media only screen and (min-width: 768px)
+  .project-section__heading
+    font-size: 40px
+@media only screen and (min-width: 992px)
+  .project-section__heading
+    font-size: 40px
+    font-weight: 700
+  .project-section__articles
+    display: none
+  .project-section__images-wrapper--top
+    display: flex
+    align-items: baseline
+    margin: 25px 0
+
+  .project-section__image
+    display: inline-block
+    margin: 0 15px
+    max-width: 500px
+
+
+  .project-section__images-wrapper--bottom
+    display: flex
+    align-items: end

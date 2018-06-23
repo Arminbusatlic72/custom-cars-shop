@@ -1,0 +1,47 @@
+.charger-section__header
+  margin: 50px 0 0
+  position: relative
+  &::after
+    position: absolute
+    content: ""
+    background: url("../img_old/Csm.png")
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    top: -130px
+    right: 0
+    height: 160px
+    width: 150px
+.charger-section__heading
+  color: black
+  font-weight: 700
+  &::after
+    content: ""
+    background: url("../img_old/Underline.png")
+    height: 1px
+    width: 30px
+    display: block
+    margin-top: 15px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+.charger-section__image-holder
+  margin: 50px 0
+.chaeger-section__paragraph
+  margin-bottom: 10px
+  text-align: left
+@media only screen and (min-width: 768px)
+.charger-section__heading
+  text-align: center
+  &::after
+    margin: 15px auto
+
+@media only screen and (min-width: 992px)
+  .charger-section__heading
+    text-align: left
+    &::after
+      margin: 15px
+
+
+.charger-section__heading
+  font-size: 40px

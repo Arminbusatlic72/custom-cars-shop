@@ -1,0 +1,282 @@
+.header-intro
+  position: relative
+  background-image: url("../img/mainBg.png")
+  background-color: black
+  height: 100vh
+  background-size: cover
+  background-position: center
+.swiper-container
+  display: none
+.main-header
+  position: fixed
+  width: 100%
+  top: 0
+  right: 0
+  background: rgba(0,0,0,0.9)
+  z-index: 999999
+  height: 60px
+  transition: top 0.2s ease-in-out
+
+.nav-up
+  top: -60px
+.main-header__container
+  position: relative
+.navbar
+
+.logo
+  float: left
+  width: 120px
+  height: 50px
+  overflow: hidden
+
+.navbar-colapse
+  display: none
+
+.menu-tag
+  display: none
+
+input
+  float: right
+.menu
+  position: absolute
+  right: -100px
+  top: -100px
+  z-index: 100
+  width: 200px
+  height: 159px
+  background: transparent
+  border-radius: 50% 50% 50% 50%
+  transition: .5s ease-in-out
+  box-shadow: 0 0 0 0 black, 0 0 0 0 black
+  cursor: pointer
+.menu-title
+  position: absolute
+  top: 100px
+  right: 100px
+.hamburger
+  position: absolute
+  top: 135px
+  left: 50px
+  width: 30px
+  height: 2px
+  background: $main-heading-color
+  display: block
+  transform-origin: center
+  transition: .5s ease-in-out
+  &::after,
+  &::before
+    transition: .5s ease-in-out
+    content: ""
+    position: absolute
+    display: block
+    width: 100%
+    height: 100%
+    background: $main-heading-color
+  &::before
+    top: -10px
+  &::after
+    bottom: -10px
+input
+  display: none
+input:checked + .menu
+  box-shadow: 0 0 0 100vw black, 0 0 0 100vh black
+  border-radius: 0
+  .hamburger
+    transform: rotate(45deg)
+    &::after
+      transform: rotate(90deg)
+      bottom: 0
+    &::before
+      transform: rotate(90deg)
+      top: 0
+input:checked + .menu + .hamburger-menu__list
+  opacity: 1
+.hamburger-menu__list
+  z-index: 200
+  position: absolute
+  top: 150%
+  left: 50%
+  transform: translate(-50%,-50%)
+  opacity: 0
+  transition: .25s 0s ease-in-out
+  list-style: none
+.hamburger-menu__list--link
+  margin-bottom: 1em
+  display: block
+  color: $bg-color
+  text-decoration: none
+.frame__holder
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  line-height: 1
+
+.frame
+  color: $main-heading-color
+  font-size: 75px
+.frame__holder--span
+  display: block
+
+.frame__holder--parafraph
+  color: $bg-color
+  font-size: 10px
+  margin-top: 30px
+  margin-bottom: 0
+.frame__holder--link
+  color: $main-heading-color
+  font-size: 10px
+  text-transform: uppercase
+  margin-top: 20px
+.frame__holder--link:hover
+  color: $main-heading-color
+  text-decoration: underline
+  cursor: pointer
+
+
+.social-media-list
+  display: none
+.scroll-down__link
+  position: absolute
+  bottom: 0
+  right: 0
+  color: $bg-color
+  font-size: 10px
+  margin: 15px
+.scroll-down__link:hover
+  color: $bg-color
+  text-decoration: none
+@media only screen and (min-width: 768px)
+  .header-intro
+    height: 100vh
+@media only screen and (min-width: 992px)
+  .main-header__nav
+    display: block
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    text-transform: uppercase
+
+  .main-header__list--item
+    display: tables
+  .main-header__list--link
+    color: $bg-color
+    .nav &:hover
+      background-color: transparent
+      color: $main-heading-color
+      
+
+
+  .menu-tag
+    display: inline-block
+    position: absolute
+    top: 20px
+    right: 18px
+    color: white
+    text-transform: uppercase
+    font-size: 25px
+  .menu
+    right: -20px
+  .logo
+    width: 130px
+    height: 60px
+  .header-intro
+    background-image: none
+    height: 100%
+  .frame
+    font-size: 120px
+  .frame__holder--parafraph
+    font-size: 16px
+    margin-top: 55px
+    margin-bottom: 0
+  .frame__holder--link
+    font-size: 12px
+
+  .swiper-container
+    display: block
+    width: 100%
+    height: 100%
+
+  .swiper-slide
+    // border-color: black
+    // opacity: 0.2
+    text-align: center
+    font-size: 18px
+    background: #fff
+    display: -webkit-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    -webkit-justify-content: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    -webkit-align-items: center
+    align-items: center
+  .main-slider__prev
+    height: 8px
+    width: 30px
+    background-image: url("../img_old/prev.png")
+    background-size: cover
+    background-position: center
+    &::after
+      content: ""
+      background: url("../img_old/Underline.png")
+      height: 1px
+      width: 30px
+      display: block
+      margin: 15px auto
+      position: absolute
+      top: -10px
+      left: 38px
+  .main-slider__next
+    height: 8px
+    width: 30px
+    background-image: url("../img_old/next.png")
+    background-size: cover
+    background-position: center
+    &::after
+      content: ""
+      background: url("../img_old/Underline.png")
+      height: 1px
+      width: 30px
+      display: block
+      margin: 15px auto
+      position: absolute
+      top: -10px
+      right: 38px
+
+
+  .social-media-list
+    display: inline-block
+    position: absolute
+    bottom: 20px
+    left: 10px
+  .social-media-list__item
+    display: inline-block
+    margin: 10px
+    position: relative
+
+
+    &::after
+      content: ""
+      background: url("../img_old/lineWhite.png")
+      height: 1px
+      width: 10px
+      display: block
+      position: absolute
+      right: -13px
+      top: 10px
+      transform: rotate(-68deg)
+
+
+
+  .social-media-list__item--last
+    display: inline-block
+
+
+  .social-media-list__link
+    color: $bg-color
+    padding: 10px

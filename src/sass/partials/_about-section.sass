@@ -1,0 +1,85 @@
+.about-section
+  text-align: center
+  // height: 80vh
+.about-section__header
+  position: relative
+  margin-top: 50px
+  margin-bottom: 70px
+  &::after
+    position: absolute
+    content: ""
+    background: url("../img_old/Asm.png")
+    display: block
+    top: 0
+    right: 0px
+    height: 150px
+    width: 160px
+.about-section__heading
+  color: black
+  &::after
+    content: ""
+    background: url("../img_old/Underline.png")
+    height: 1px
+    width: 30px
+    display: block
+    margin: 15px auto
+.about-section__paragraph
+  margin: 15px
+.about-section__image-holder
+  margin: 50px 0
+@media only screen and (min-width: 768px)
+  .about-section__heading
+    font-size: 40px
+
+
+@media only screen and (min-width: 992px)
+  .about-section
+    text-align: left
+
+  .about-section__heading
+    margin-bottom: 90px
+    font-size: 40px
+    font-weight: 700
+    padding-top: 45px
+    &::after
+      margin: 15px 0
+      height: 2px
+  .about-section__header
+    &::before
+      position: absolute
+      content: ""
+      background: url("../img_old/WhoWeAre.png")
+      display: block
+      top: 285px
+      right: 28px
+      height: 80px
+      width: 8px
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+
+    &::after
+      position: absolute
+      content: ""
+      background: url("../img_old/Asm.png")
+      display: block
+      top: 0
+      right: -25px
+      height: 130px
+      width: 125px
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+  .about-section__span
+    &::before
+      position: absolute
+      content: ""
+      background: url("../img_old/line.png")
+      display: block
+      top: 240px
+      right: 30px
+      height: 40px
+      width: 1px
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat

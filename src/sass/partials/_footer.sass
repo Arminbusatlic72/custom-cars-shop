@@ -1,0 +1,34 @@
+.main-footer
+  background-color: black
+  text-align: center
+  height: 100px
+.main-footer__container
+  position: relative
+
+.logo
+  float: left
+  width: 120px
+  height: 50px
+  overflow: hidden
+.main-footer__paragraph
+  color: #343
+  font-size: 8px
+.main-footer__span
+  color: $bg-color
+.main-footer__nav
+  display: none
+@media only screen and (min-width: 992px)
+  .main-footer__nav
+    position: absolute
+    display: inline-block
+    right: 0
+    top: 0
+    text-transform: uppercase
+    color: $bg-color
+  .main-footer__nav--link
+    color: $bg-color
+    .nav &:hover
+      background-color: transparent
+      color: $main-heading-color
+
+  
